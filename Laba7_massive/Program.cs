@@ -19,11 +19,17 @@
         doubleMassiv.AddData(1, 2.5);
         Console.WriteLine($"Длина массива {doubleMassiv.GetLength()}");
         Console.WriteLine($"Первый элемент массива {doubleMassiv.GetData(0)}");
+        
 
         Massiv<string> stringMassiv = new Massiv<string>(2);
         stringMassiv.AddData(0,"Run it up");
         stringMassiv.AddData(1, "Turn up");
         Console.WriteLine($"Второй элемент массива {stringMassiv.GetData(1)}");
+        Console.WriteLine("Строчный массив:");
+        for (int i = 0; i < stringMassiv.length; i++)
+        {
+            Console.WriteLine(stringMassiv.GetData(i));
+        }
     }
 }
 class Massiv<T>
@@ -78,3 +84,4 @@ class Massiv<T>
         return length;
     }
 }
+
